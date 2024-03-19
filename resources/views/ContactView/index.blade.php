@@ -12,7 +12,7 @@
     
     <!-- TOMBOL TAMBAH DATA -->
     <div class="pb-3">
-      <a href='{{url('Contact/create')}}' class="btn btn-primary">+ Tambah Data</a>
+      <a href='{{url('Contact/create')}}' class="btn btn-primary">+ Tambah Data Contact</a>
     </div>
 
     <table class="table table-striped">

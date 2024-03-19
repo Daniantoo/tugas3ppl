@@ -6,7 +6,11 @@
         <form action="/sesi/create" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="email" class="form-label">Username</label>
+                <label for="name" class="form-label">Name</label>
+                <input type="text" value="{{Session::get('name')}}" name="name" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
                 <input type="email" value="{{Session::get('email')}}" name="email" class="form-control">
             </div>
             <div class="mb-3">

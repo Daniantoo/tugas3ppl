@@ -57,19 +57,24 @@ class SessionController extends Controller
 
     function create(Request $request)
     {
+        FacadesSession::flash('name', $request->name);
         FacadesSession::flash('email', $request->email);
         $request->validate([
-            'email'=>'required|unique:users',
+            'name'=>'required',
+            'email'=>'required|email|unique:users',
             'password'=>'required|min:6'
         ],
         [
+            'nama.required'=>'Nama wajib diisi',
             'email.required'=>'email wajib diisi!',
+            'email.email'=>'email wajib menggunakan @',
             'email.unique'=>'email sudah pernah digunakan!',
             'password.required'=>'Password wajib diisi!',
             'password.min'=>'Password minimal 6 karakter!'
         ]);
 
         $data = [
+            'name'=>$request->name,
             'email'=>$request->email,
             'password'=> Hash::make($request->password)
         ];
@@ -83,7 +88,7 @@ class SessionController extends Controller
         if(Auth::attempt($infologin))
         {
             //Jika Autentikasi Sukses
-            return redirect('Contact')->with('success', Auth::user()->email.' Berhasil Login');
+            return redirect('Contact')->with('success', Auth::user()->name.' Berhasil Register');
         }else
         {
             // Jika Autentikasi Gagal

@@ -5,6 +5,7 @@
 
     <ul class="nav nav-pills">
       <li class="nav-item"><a href="/Contact" class="nav-link active" aria-current="page">Contact</a></li>
+      <li class="nav-item"><a href="/Address" class="nav-link active" aria-current="page">Address</a></li>
       <li class="nav-item"><a href="/sesi/logout" class="nav-link">Logout</a></li>
     </ul>
   </header>

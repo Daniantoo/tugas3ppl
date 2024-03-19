@@ -8,6 +8,9 @@
   </head>
   <body class="bg-light">
     <main class="container">
+      @if (Auth::check())
+        @include('komponen/menu')
+      @endif
       @include('komponen.pesan')
         @yield('content')
     </main>

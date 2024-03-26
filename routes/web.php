@@ -6,8 +6,8 @@ use App\Http\Controllers\AddressController;
 use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('sesi/welcome');
 });
 
 Route::resource('Contact', ContactController::class);
@@ -23,3 +23,4 @@ Route::post('/sesi/create', [SessionController::class, 'create']);
 
 Route::get('/address/register', [AddressController::class, 'register']);
 Route::post('/address/create', [AddressController::class, 'create']);
+

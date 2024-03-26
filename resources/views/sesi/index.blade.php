@@ -16,6 +16,9 @@
             <div class="mb-3 d-grid">
                 <button name="submit" type="submit" class="btn btn-primary">Login</button>
             </div>
+            <div>
+                <a href="/" class="btn btn-primary btn-lg">Kembali</a>
+            </div>
         </form>
     </div>
     

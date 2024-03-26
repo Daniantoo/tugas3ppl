@@ -11,4 +11,9 @@ class Address extends Model
     protected $fillable = ['street', 'city', 'province', 'country', 'postal_code'];
     protected $table = 'address';
     public $timestamps = false;
+
+    public function contact()
+    {
+        return $this->belongsTo(Contact::class);
+    }
 }

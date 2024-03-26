@@ -11,4 +11,14 @@ class contact extends Model
     protected $fillable = ['first_name', 'last_name', 'phone', 'email'];
     protected $table = 'contact';
     public $timestamps = false;
+
+    public function addresses()
+    {
+        return $this->hasMany(Address::class, 'contact_id', 'id');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

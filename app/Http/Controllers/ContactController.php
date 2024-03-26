@@ -14,7 +14,7 @@ class ContactController extends Controller
     {
         $katakunci = $request->katakunci;
         $jumlahbaris = 4;
-        if(strlen($katakunci)){
+        if(strlen($katakunci)){ 
             $data = Contact::where('first_name', 'like', "%$katakunci%")
             ->orWhere('last_name', 'like', "%$katakunci%")
             ->orWhere('phone', 'like', "%$katakunci%")
